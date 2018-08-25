@@ -30,26 +30,18 @@
 			<input type="button" name="submit" value="SUBMIT" onclick="submitForm()">
 		</form>
 	</fieldset>
-<?php
-if(isset($_POST['submit'])){
-	if(ctype_lower($_POST['username'])){
-		echo "Valid Username<br>";
-	}else{
-		echo "<script>alert('Username Must Be Lower');</script>";
-	}
-	if(preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $_POST['email'])) {
-	  echo 'Valid Email<br>';
-	} else {
-	  echo "<script>alert('Invalid Email');</script>";
-	}
-	if (preg_match("/^[\+0-9\-\(\)\s]*$/", $_POST['phoneNumber'])) {
-		echo "Valid Phone Number<br>";
-	}else{
-		echo "<script>alert('Invalid Phone Number');</script>";
-	}
-}
-?>
 
+	<br>
+	<script>
+		function submitForm(){
+			if(document.getElementById("username").value != document.getElementById("username").value.toLowerCase()){
+				alert("Username must be lower case");
+				return;
+			}
+			
+			document.getElementById("form").submit();
+		}
+	</script>
 
 </body>
 </html>
