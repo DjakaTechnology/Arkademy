@@ -5,7 +5,7 @@
 <body>
 	<fieldset>
 		<legend>Check</legend>
-		<form id="form" method="POST">
+		<form id="form" method="POST" onsubmit="return valideteForm()">
 			<table>
 				<tr>
 					<td>
@@ -24,22 +24,26 @@
 				<tr>
 					<td><label>Phone Number</label></td>
 					<td>:</td>
-					<td><input id="phoneNumber" type="number" name="phoneNumber" required></td>
+					<td><input id="phoneNumber" type="tel" name="phoneNumber" required></td>
 				</tr>
 			</table>
-			<input type="button" name="submit" value="SUBMIT" onclick="submitForm()">
+			<input type="submit" name="submit" value="SUBMIT">
+			
 		</form>
 	</fieldset>
 
 	<br>
 	<script>
-		function submitForm(){
-			if(document.getElementById("username").value != document.getElementById("username").value.toLowerCase()){
+		function valideteForm(){
+			var username = document.getElementById("username").value;
+			var email = document.getElementById("email").value;
+			var phoneNumber = document.getElementById("phoneNumber").value;
+			if(username != username.toLowerCase()){
 				alert("Username must be lower case");
-				return;
+				return false;
 			}
-			
-			document.getElementById("form").submit();
+
+			return true;
 		}
 	</script>
 

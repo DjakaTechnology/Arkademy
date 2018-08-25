@@ -24,10 +24,10 @@
 				<tr>
 					<td><label>Phone Number</label></td>
 					<td>:</td>
-					<td><input id="phoneNumber" type="number" name="phoneNumber" required></td>
+					<td><input id="phoneNumber" type="tel" name="phoneNumber" required></td>
 				</tr>
 			</table>
-			<input type="button" name="submit" value="SUBMIT" onclick="submitForm()">
+			<input type="button" name="btnSubmit" value="SUBMIT" onclick="submitForm()">
 		</form>
 	</fieldset>
 <?php
