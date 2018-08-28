@@ -2,7 +2,7 @@
 $host 	= "localhost";
 $user 	= "root";
 $pass 	= "";
-$db 	= "arka";
+$db 	= "blog_arka";
 $conn	= mysqli_connect($host,$user,$pass,$db);
 ?>
 
