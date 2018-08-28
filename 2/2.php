@@ -44,7 +44,7 @@ function CheckValid(){
 		} else {
 		  echo "<script>alert('Invalid Email');</script>";
 		}
-		if (preg_match("/^[\+0-9\-\(\)\s]*$/", $_POST['phoneNumber'])) {
+		if (preg_match("/^[\+0-9\(\)\s]*$/", $_POST['phoneNumber'])) {
 			echo "Valid Phone Number<br>";
 		}else{
 			echo "<script>alert('Invalid Phone Number');</script>";
